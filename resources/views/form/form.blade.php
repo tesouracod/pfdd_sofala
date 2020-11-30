@@ -8,14 +8,14 @@
 
 		<!-- MATERIAL DESIGN ICONIC FONT -->
 		{{-- <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css"> --}}
-     <link rel="stylesheet" href="{{asset('fonts/material-design-iconic-font/css/material-design-iconic-font.css')}}">
+     <link rel="stylesheet" href="{{asset('form_cadastro/fonts/material-design-iconic-font/css/material-design-iconic-font.css')}}">
 		<!-- DATE-PICKER -->
 		{{-- <link rel="stylesheet" href="vendor/date-picker/css/datepicker.min.css"> --}}
-     <link rel="stylesheet" href="{{ asset('vendor/date-picker/css/datepicker.min.css')}}">
+     <link rel="stylesheet" href="{{ asset('form_cadastro/vendor/date-picker/css/datepicker.min.css')}}">
 
 		<!-- STYLE CSS -->
         {{-- <link rel="stylesheet" href="css/style.css"> --}}
-     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+     <link rel="stylesheet" href="{{ asset('form_cadastro/css/style.css')}}">
 
 	</head>
 	<body>
@@ -37,7 +37,7 @@
 	                    		Nome Completo:
 	                    	</label>
 	                    	<div class="form-holder">
-	                    		<input type="text" class="form-control">
+	                    		<input type="text" name="name" class="form-control">
 	                    	</div>
 	                    </div>
 	                    <div class="form-row">
@@ -45,7 +45,7 @@
 	                    		Seu Email:
 	                    	</label>
 	                    	<div class="form-holder">
-	                    		<input type="text" class="form-control">
+	                    		<input type="email" name="email" class="form-control">
 	                    	</div>
 	                    </div>
 	                    <div class="form-row">
@@ -53,7 +53,12 @@
 	                    		Número de Telefone:
 	                    	</label>
 	                    	<div class="form-holder">
-	                    		<input type="text" class="form-control">
+                                <input type="text"  name="phone" class="form-control">
+                                  @if(session('msg_phone'))
+        <div class = "alert alert-danger">
+             {{session('msg_phone ')}}
+        </div>
+@endif
 	                    	</div>
 	                    </div>
 	                    <div class="form-row">
@@ -61,7 +66,7 @@
 	                    		Morada:
 	                    	</label>
 	                    	<div class="form-holder">
-	                    		<input type="text" class="form-control">
+	                    		<input type="text" name="address" class="form-control">
 	                    	</div>
 	                    </div>
 	                    <div class="form-row" style="margin-bottom: 50px;">
@@ -71,11 +76,11 @@
 	                    	<div class="form-holder">
 	                    		<div class="checkbox-circle">
 									<label class="male">
-										<input type="radio" name="gender" value="male" checked> Masculino<br>
+										<input type="radio" name="gender" value="M" checked> Masculino<br>
 										<span class="checkmark"></span>
 									</label>
 									<label class="female">
-										<input type="radio" name="gender" value="female"> Feminino<br>
+										<input type="radio" name="gender" value="F"> Feminino<br>
 										<span class="checkmark"></span>
 									</label>
 								</div>
@@ -99,10 +104,11 @@
 	                    		Província:
 	                    	</label>
 	                    	<div class="form-holder">
-	                    		<select name="" id="" class="form-control">
-									<option value="" class="option">Tete</option>
-									<option value="" class="option">Sofala</option>
-									<option value="" class="option">Maputo</option>
+	                    		<select name="" id="" name="province" class="form-control">
+                                    <option value="" class="option">Escolhe uma Opcao</option>
+                                       @foreach($province as $value)
+                                    <option value="{{$value->id}}" class="option">{{$value->province}}</option>
+                                    @endforeach
 								</select>
 								<i class="zmdi zmdi-caret-down"></i>
 	                    	</div>
@@ -112,10 +118,11 @@
 	                    		Distrito:
 	                    	</label>
 	                    	<div class="form-holder">
-	                    		<select name="" id="" class="form-control">
-									<option value="" class="option">Distrito1</option>
-									<option value="" class="option">Distrito2</option>
-									<option value="" class="option">Distrito3</option>
+	                    		<select name="" id="" name="distrit_id" class="form-control">
+                                    <option value="" class="option">Escolhe Distrito </option>
+                                      @foreach($distrit as $value)
+									<option value="{{$value->id}}" class="option">{{$value->district}}</option>
+@endforeach
 								</select>
 								<i class="zmdi zmdi-caret-down"></i>
 	                    	</div>
@@ -130,11 +137,11 @@
 	                    		Nível Académico:
 	                    	</label>
 	                    	<div class="form-holder">
-	                    		<select name="" id="" class="form-control">
-									<option value="" class="option">1 Ano</option>
-									<option value="" class="option">2 Ano</option>
-									<option value="" class="option">3 Ano</option>
-									<option value="" class="option">4 Ano</option>
+	                    		<select name="" id="" name="academic_leve" class="form-control">
+									<option value="1" class="option">1 Ano</option>
+									<option value="2" class="option">2 Ano</option>
+									<option value="3" class="option">3 Ano</option>
+									<option value="4" class="option">4 Ano</option>
 									<option value="" class="option">Licenciado</option>
 								</select>
 								<i class="zmdi zmdi-caret-down"></i>
@@ -145,10 +152,11 @@
 	                    		Nome da Universidade:
 	                    	</label>
 	                    	<div class="form-holder">
-	                    		<select name="" id="" class="form-control">
-									<option value="" class="option">UCM</option>
-									<option value="" class="option">UZ</option>
-									<option value="" class="option">UP</option>
+	                    		<select name="" id="" name="institution" class="form-control">
+                                    <option value="" class="option">Escolhe uma Opcao</option>
+                                      @foreach($institution as $value)
+                                    <option value="{{$value->id}}" class="option">{{$value->institution}}</option>
+                                     @endforeach
 								</select>
 								<i class="zmdi zmdi-caret-down"></i>
 	                    	</div>
@@ -158,10 +166,11 @@
 	                    		Nome do Curso:
 	                    	</label>
 	                    	<div class="form-holder">
-	                    		<select name="" id="" class="form-control">
-									<option value="" class="option">Informatica</option>
-									<option value="" class="option">UZ</option>
-									<option value="" class="option">UP</option>
+	                    		<select name="" id="" name="course" class="form-control">
+                                    <option  class="option">Escolhe uma Opcao</option>
+                                       @foreach($course as $value)
+                                    <option value="{{$value->id}}" class="option">{{$value->course}}</option>
+                                    @endforeach
 								</select>
 								<i class="zmdi zmdi-caret-down"></i>
 	                    	</div>
@@ -171,7 +180,7 @@
 	                    		Já participou do PFDD?
 	                    	</label>
 	                    	<div class="form-holder">
-	                    		<select name="" id="" class="form-control">
+	                    		<select name="" id="" name="" class="form-control">
 									<option value="" class="option">Sim</option>
 									<option value="" class="option">Não</option>
 								</select>
@@ -184,23 +193,23 @@
 		</div>
 
         {{-- <script src="js/jquery-3.3.1.min.js"></script> --}}
-      <script src="{{ asset('js/jquery-3.3.1.min.js')}}"></script>
+      <script src="{{ asset('form_cadastro/js/jquery-3.3.1.min.js')}}"></script>
 
 
 		<!-- JQUERY STEP -->
-        <script src="js/jquery.steps.js"></script>
-      <script src="{{ asset('js/jquery.steps.js')}}"></script>
+        <script src="form_cadastro/js/jquery.steps.js"></script>
+      <script src="{{ asset('form_cadastro/js/jquery.steps.js')}}"></script>
 
 
 		<!-- DATE-PICKER -->
-        <script src="vendor/date-picker/js/datepicker.js"></script>
-      <script src="{{ asset('vendor/date-picker/js/datepicker.js')}}"></script>
+        <script src="form_cadastro/vendor/date-picker/js/datepicker.js"></script>
+      <script src="{{ asset('form_cadastro/vendor/date-picker/js/datepicker.js')}}"></script>
 
         {{-- <script src="vendor/date-picker/js/datepicker.en.js"></script> --}}
-      <script src="{{ asset('vendor/date-picker/js/datepicker.en.js')}}"></script>
+      <script src="{{ asset('form_cadastro/vendor/date-picker/js/datepicker.en.js')}}"></script>
 
 
-        <script src="js/main.js"></script>
+        <script src="form_cadastro/js/main.js"></script>
       {{-- <script src="{{ asset('js/main.js')}}"></script> --}}
 
 

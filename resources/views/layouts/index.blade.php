@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PFDD - Programa Férias Desenvolvimento o Distrito</title>
 	<!-- ==============================================
-    Favicons
-
+	Favicons
 	=============================================== -->
 	<link rel="shortcut icon" href=" {!! asset('images/') !!}">
-	<link rel="apple-touch-icon" href=" {!! asset('images/') !!}">
-	<link rel="apple-touch-icon" sizes="72x72" href=" {!! asset('images/') !!}">
-	<link rel="apple-touch-icon" sizes="114x114" href=" {!! asset('images/') !!}">
+	<link rel="apple-touch-icon" href="{!! asset('images/') !!}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{!! asset('images/') !!}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{!! asset('images/') !!}">
 
 	<!-- ==============================================
 	CSS VENDOR
@@ -23,19 +22,11 @@
 	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
 
 
-  <link rel="stylesheet" type="text/css"  href="{{ asset('css/bootstrap.min.css')}}">
-  <link rel="stylesheet" type="text/css"  href="{{ asset('css/vendor/font-awesome.min.css')}}">
-  <link rel="stylesheet" type="text/css" type="text/css"  href="{{ asset('css/owl.carousel.min.cs')}}">
-  <link rel="stylesheet" type="text/css"  href="{{ asset('css/owl.theme.default.min.css')}}">
-
-
 
 	<!-- ==============================================
 	Custom Stylesheet
 	=============================================== -->
-    {{-- <link rel="stylesheet" type="text/css" href="css/style.css" /> --}}
-  <link rel="stylesheet" href="{{ asset('css/style.css')}}">
-
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
 </head>
 
@@ -48,7 +39,7 @@
 					<div class="container">
 					    <nav id="navbar-example" class="navbar navbar-expand-lg">
 					        <a class="navbar-brand" href="index.html">
-								<img src="{!! asset('images/logo.png') !!}" alt="" />
+								<img src="images/logo.png" alt="" />
 							</a>
 					        <div class="collapse navbar-collapse" id="navbarNavDropdown">
 					            <ul class="navbar-nav ml-auto">
@@ -56,9 +47,9 @@
 
 					                </li>
 					            </ul>
-
 					        </div>
 					        <a href="{{ url('/cadastrar') }}" class="btn btn-primary btn-nav">INSCREVA-SE</a>
+					        <a href="{{url('login') }}" class="btn btn-primary btn-nav2">LOGIN</a>
 					    </nav> <!-- -->
 					</div>
 				</div>
@@ -71,11 +62,11 @@
 		    		<!-- Item 1 -->
 			    	<div class="item">
 			    		<div class="overlay-bg"></div>
-			        	<img src="{!! asset('images/estudante2.jpg') !!}" alt="Slider">
+			        	<img src="images/estudante2.jpg" alt="Slider">
 			        	<div class="container d-flex align-items-center h-center">
 			            	<div class="wrap-caption">
 				                <h1 class="caption-heading">16a Edição/2021<span></span></h1>
-                                <p class="uk24">PFDD, Programa Férias Desenvolvimendo o Distrito.</p>
+                                <p class="uk24">PFDD, Programa Férias Desenvolvimento o Distrito.</p>
 				            </div>
 			            </div>
 			    	</div>
@@ -197,7 +188,7 @@
 										<div class="rs-testimonial-1">
 											<div class="quote-box">
 												<div class="media">
-													<img src="  {!! asset('images/dummy-img-400x400.jpg') !!}" alt="" class="rounded-circle">
+													<img src="images/dummy-img-400x400.jpg" alt="" class="rounded-circle">
 												</div>
 												<blockquote>
 												 “Foi bem acolhido, trataram-me como filho. Foi uma experiência memorável. Desenvolvi uma pesquisa, que foi aprovada e implementada neste distrito”, afirmou ligeiramente emocionado.
@@ -214,7 +205,7 @@
 										<div class="rs-testimonial-1">
                                             <div class="quote-box">
                                                 <div class="media">
-                                                    <img src=" {!! asset('images/dummy-img-400x400.jpg') !!}" alt="" class="rounded-circle">
+                                                    <img src="images/dummy-img-400x400.jpg" alt="" class="rounded-circle">
                                                 </div>
                                                 <blockquote>
                                                  “Foi bem acolhido, trataram-me como filho. Foi uma experiência memorável. Desenvolvi uma pesquisa, que foi aprovada e implementada neste distrito”, afirmou ligeiramente emocionado.
@@ -231,7 +222,7 @@
 										<div class="rs-testimonial-1">
                                             <div class="quote-box">
                                                 <div class="media">
-                                                    <img src=" {!! asset('images/dummy-img-400x400.jpg') !!}" alt="" class="rounded-circle">
+                                                    <img src="images/dummy-img-400x400.jpg" alt="" class="rounded-circle">
                                                 </div>
                                                 <blockquote>
                                                  “Foi bem acolhido, trataram-me como filho. Foi uma experiência memorável. Desenvolvi uma pesquisa, que foi aprovada e implementada neste distrito”, afirmou ligeiramente emocionado.
@@ -248,7 +239,7 @@
 										<div class="rs-testimonial-1">
                                             <div class="quote-box">
                                                 <div class="media">
-                                                    <img src=" {!! asset('images/dummy-img-400x400.jpg') !!}" alt="" class="rounded-circle">
+                                                    <img src="images/dummy-img-400x400.jpg" alt="" class="rounded-circle">
                                                 </div>
                                                 <blockquote>
                                                  “Foi bem acolhido, trataram-me como filho. Foi uma experiência memorável. Desenvolvi uma pesquisa, que foi aprovada e implementada neste distrito”, afirmou ligeiramente emocionado.
@@ -288,22 +279,22 @@
 					<div class="container">
 						<div class="row gutter-5">
 							<div class="col-6 col-md-4 col-lg-2">
-								<a href="#"><img src=" {!! asset('images/seje.png') !!}" alt="" class="img-fluid img-border"></a>
+								<a href="#"><img src="images/seje.png" alt="" class="img-fluid img-border"></a>
 							</div>
 							<div class="col-6 col-md-4 col-lg-2">
-								<a href="#"><img src="  {!! asset('images/lam.png') !!}" alt="" class="img-fluid img-border"></a>
+								<a href="#"><img src="images/lam.png" alt="" class="img-fluid img-border"></a>
 							</div>
 							<div class="col-6 col-md-4 col-lg-2">
-								<a href="#"><img src="{!! asset('images/at.png') !!}" alt="" class="img-fluid img-border"></a>
+								<a href="#"><img src="images/at.png" alt="" class="img-fluid img-border"></a>
 							</div>
 							<div class="col-6 col-md-4 col-lg-2">
-								<a href="#"><img src="{!! asset('images/vso.png ') !!}" alt="" class="img-fluid img-border"></a>
+								<a href="#"><img src="images/vso.png" alt="" class="img-fluid img-border"></a>
 							</div>
 							<div class="col-6 col-md-4 col-lg-2">
-								<a href="#"><img src=" {!! asset('images/emose.png') !!}" alt="" class="img-fluid img-border"></a>
+								<a href="#"><img src="images/emose.png" alt="" class="img-fluid img-border"></a>
 							</div>
 							<div class="col-6 col-md-4 col-lg-2">
-								<a href="#"><img src=" {!! asset('images/pund.png') !!}" alt="" class="img-fluid img-border"></a>
+								<a href="#"><img src="images/pund.png" alt="" class="img-fluid img-border"></a>
 							</div>
 
 						</div>
@@ -385,12 +376,11 @@
 	        </div>
 
 	<!-- JS VENDOR -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
 
-      <script src="{{ asset('js/jquery.min.js')}}"></script>
-      <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-      <script src="{{ asset('js/owl.carousel.js')}}"></script>
-      <script src="{{ asset('js/script.js')}}"></script>
-
+	<script src="js/script.js"></script>
 
 </body>
 </html>

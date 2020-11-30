@@ -8,6 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Course extends Model
 {
     use HasFactory;
-   
+    protected $table = 'course';
+    protected $primaryKey = 'id';
+    // protected $name = 'id';
+    public $timestamps = false;
+    protected $fillable = [
+        'course', 'institution_id',
+    ];
+
+    public function Institution()
+    {
+        return $this->hasOne(Institution::class, 'institution_id', 'id');
+    }
 }
 

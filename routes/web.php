@@ -4,6 +4,7 @@ use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,66 +18,69 @@ use App\Http\Controllers\UsersController;
 */
 Route::get('/', function () {
 
-    // // $year = new DateTime();
-    // // $reg_date = $year->format('YYYY-MM-dd');
-    // // $name = $request->name;
-    // // $email = $request->email;
-    // // $gender = $request->gender;
-    // // $date_birth = $request->date_birth;
-    // // $distrit_id = $request->distrit_id;
-    // // $acdemic_leve = $request->academic_leve;
-    // // $courseid = $request->course_id;
-    // // $category = $request->category_id;
-    // // // $request->reg_date;
-    // // $phone = $request->phone;
 
-    // $phone = '8422133';
-    // $category = '0';
-    // $date_birth = '2020-10-22';
-    // $gender = 'm';
-    // $email = 'asajsjs@gmail.co';
-    // $name = 'ad';
-    // $acdemic_leve = 'primw';
+    $phone = '8422133';
+    $category = '0';
+    $date_birth = '2020-10-22';
+    $gender = 'm';
+    $email = 'asajsjs@gmail.co';
+    $name = 'ad';
+    $acdemic_leve = 'primw';
+    $distrit_id=1;
+    $course_id=1;
+    $category_id=null;
+    $year = new DateTime();
 
-    // // //chamndo stror procedure ou forma que eu vinha fazendo usando array
-    // // // $member = [
-    // // //     'nome' => $name,
-    // // //     'email' => $email,
-    // // //     'gender' => $gender,
-    // // //     'date_birth' => $date_birth,
-    // // //     'distrit_id' => $distrit_id,
-    // // //     'acdemic_leve' => $acdemic_leve,
-    // // //     'courseid' => $courseid,
-    // // //     'category' => $category,
-    // // //     'reg_date' => $reg_date,
-    // // // ];
-    // // // DB::table('members')->insert($member);
-    // // //  $member = [
-    // // //                 'nome' => $name,
-    // // //                 'email' => $email,
-    // // //                 'gender' => $gender,
-    // // //                 'date_birth' => $date_birth,
 
-    // // //         'Academic_level' =>'m',
 
-    // // //             ];
-    // // //             DB::table('members')->insert($member);
+    //  $member = [
+    //                 'nome' => $name,
+    //                 'email' => $email,
+    //                 'gender' => $gender,
+    //                 'date_birth' => $date_birth,
 
-    // $last_id= collect(DB::select('SELECT insert_new_member(?,?,?,?) ', [
+    //         'Academic_level' =>'m',
+
+    //             ];
+    //             DB::table('members')->insert($member);
+
+    // $last_id= (DB::select(
+    //     'SELECT insert_new_member(?,?,? ,?,?,? ,?,?,?) '
+    // , [
     //         $name,
     //         $email,
     //         $gender,
     //         $date_birth,
+    //         $distrit_id,
+    //          $acdemic_leve,
+
+    //         $course_id,
+    //         $category_id,
+    //         $year,
+    //     ]
+
+    // ));
+    // dd($last_id);
+    // die;
+    // return   $last_id;
+    //   DB::select( collect('CALL $insert_new_member(?,?,?,?, ?) '
+    // , [
+
+    //         $name,
+    //         $email,
+    //         $gender,
+    //         $date_birth,
+    //          $acdemic_leve
 
     //     ]));
-    //     return $last_id;
+    //     return;
 
 
-    // //     $ultimo_id = DB::select('select * from members ');
-    // //     $id_ultimo_iserido = collect($last_id)->max('id');
-    // //     dd($id_ultimo_iserido);
-    // //     die;
-    // //     DB::select('call insert_phone(?,?)', [$phone,  $id_ultimo_iserido]);
+        // $ultimo_id = DB::select('select * from members ');
+        // $id_ultimo_iserido = collect($ultimo_id)->max('id');
+        // // dd($id_ultimo_iserido);
+        // // die;
+        // DB::select('call insert_phone(?,?)', [$phone,  $id_ultimo_iserido]);
 
         // echo "deu certo";
     return view('layouts.index');
@@ -88,6 +92,9 @@ Route::get('/', function () {
  route::get('cadastrar', [UsersController::class, 'create']);
 route::post('Cadastrado', [UsersController::class, 'store']);
 route::get('desabled_member', [UsersController::class, 'destroy']);
+
+route::get('login', [LoginController::class, 'create']);
+
 
 
 
