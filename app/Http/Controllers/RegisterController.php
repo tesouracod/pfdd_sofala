@@ -17,6 +17,9 @@ class RegisterController extends Controller
     {
         //
     }
+    //  public function login(){
+    //       return view('login.login');
+    //  }
 
     /**
      * Show the form for creating a new resource.
@@ -59,7 +62,7 @@ class RegisterController extends Controller
         $name = 'ad';
         $acdemic_leve = 'primw';
         try {
-       
+
             DB::select('call insert_new_member(?,?,?,?,?,?,?,?,?)', [
                 $name,
                 $email,

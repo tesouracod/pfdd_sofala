@@ -19,14 +19,9 @@
 	                        	<label class="form-control-label text-muted"><h5>E-mail</h5></label>
 	                        	<input type="text" id="email" name="email" placeholder="Seu email" class="form-control">
 	                        	</div>
-	                        <div class="form-group">
-	                        	<label class="form-control-label text-muted"><h5>Senha</h5></label>
-	                        	<input type="password" id="psw" name="psw" placeholder="Sua senha" class="form-control">
-	                        </div>
 	                        <div class="row justify-content-center my-3 px-3">
-	                        	<button class="btn-block btn-color">Login </button>
+	                        	<button class="btn-block btn-color">Recuperar </button>
 	                        </div>
-	                        <div class="row justify-content-center my-2"> <a href=" {{url('/reset_password') }}"><small class="text-muted">Esqueseu a Senha?</small></a> </div>
 	                    </div>
 	                </div>
 	                <!--<div class="bottom text-center mb-5">
@@ -43,7 +38,7 @@
 	</div>
 
 	<script src="login/js/jquery-3.2.1.min.js"></script>
-	<script src="login/login/js/bootstrap.min.js"></script>
+	<script src="login/js/bootstrap.min.js"></script>
 	<script src="login/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

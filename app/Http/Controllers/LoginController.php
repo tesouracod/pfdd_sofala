@@ -22,11 +22,12 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-        return view('login.login');
-    }
+    public function login(){
+          return view('login.login');
+     }
+      public function reset_password(){
+          return view('login.recover_pass');
+     }
 
     /**
      * Store a newly created resource in storage.

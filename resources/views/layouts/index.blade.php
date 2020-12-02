@@ -49,7 +49,7 @@
 					            </ul>
 					        </div>
 					        <a href="{{ url('/cadastrar') }}" class="btn btn-primary btn-nav">INSCREVA-SE</a>
-					        <a href="{{url('login') }}" class="btn btn-primary btn-nav2">LOGIN</a>
+					        <a href="{{url('/Entrar') }}" class="btn btn-primary btn-nav2">LOGIN</a>
 					    </nav> <!-- -->
 					</div>
 				</div>

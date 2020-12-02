@@ -7,21 +7,21 @@
 		<meta name="author" content="">
 
 		<!-- MATERIAL DESIGN ICONIC FONT -->
-		{{-- <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.css"> --}}
+		<link rel="stylesheet" href="form_cadastro/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
      <link rel="stylesheet" href="{{asset('form_cadastro/fonts/material-design-iconic-font/css/material-design-iconic-font.css')}}">
 		<!-- DATE-PICKER -->
-		{{-- <link rel="stylesheet" href="vendor/date-picker/css/datepicker.min.css"> --}}
+		<link rel="stylesheet" href="form_cadastro/vendor/date-picker/css/datepicker.min.css">
      <link rel="stylesheet" href="{{ asset('form_cadastro/vendor/date-picker/css/datepicker.min.css')}}">
 
 		<!-- STYLE CSS -->
-        {{-- <link rel="stylesheet" href="css/style.css"> --}}
-     <link rel="stylesheet" href="{{ asset('form_cadastro/css/style.css')}}">
+        <link rel="stylesheet" href="form_cadastro/css/style.css">
+     {{-- <link rel="stylesheet" href="{{ asset('form_cadastro/css/style.css')}}"> --}}
 
 	</head>
 	<body>
 		<div class="wrapper">
 			<div class="image-holder">
-				<img src="images/form2.png" alt="">
+				<img src="form_cadastro/images/form2.png" alt="">
 			</div>
             <form action="">
             	<div class="form-header">
@@ -122,7 +122,7 @@
                                     <option value="" class="option">Escolhe Distrito </option>
                                       @foreach($distrit as $value)
 									<option value="{{$value->id}}" class="option">{{$value->district}}</option>
-@endforeach
+                                     @endforeach
 								</select>
 								<i class="zmdi zmdi-caret-down"></i>
 	                    	</div>
@@ -192,7 +192,7 @@
             </form>
 		</div>
 
-        {{-- <script src="js/jquery-3.3.1.min.js"></script> --}}
+        {{-- <script src="form_cadastro/js/jquery-3.3.1.min.js"></script> --}}
       <script src="{{ asset('form_cadastro/js/jquery-3.3.1.min.js')}}"></script>
 
 
@@ -202,15 +202,15 @@
 
 
 		<!-- DATE-PICKER -->
-        <script src="form_cadastro/vendor/date-picker/js/datepicker.js"></script>
+        {{-- <script src="form_cadastro/vendor/date-picker/js/datepicker.js"></script> --}}
       <script src="{{ asset('form_cadastro/vendor/date-picker/js/datepicker.js')}}"></script>
 
         {{-- <script src="vendor/date-picker/js/datepicker.en.js"></script> --}}
       <script src="{{ asset('form_cadastro/vendor/date-picker/js/datepicker.en.js')}}"></script>
 
 
-        <script src="form_cadastro/js/main.js"></script>
-      {{-- <script src="{{ asset('js/main.js')}}"></script> --}}
+        {{-- <script src="form_cadastro/js/main.js"></script> --}}
+      <script src="{{ asset('form_cadastro/js/main.js')}}"></script>
 
 
 <!-- Template created and distributed by Colorlib -->

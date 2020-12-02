@@ -93,7 +93,9 @@ Route::get('/', function () {
 route::post('Cadastrado', [UsersController::class, 'store']);
 route::get('desabled_member', [UsersController::class, 'destroy']);
 
-route::get('login', [LoginController::class, 'create']);
+route::get('Entrar', [LoginController::class, 'login']);
+route::get('reset_password', [LoginController::class, 'reset_password']);
+
 
 
 
